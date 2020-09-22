@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}
+Shivam News Website
+{% endblock title %}
+{% block body %}
+<div class="jumbotron">
+    <h1>Latest News</h1>
+    
+  </div>
+  <div class="container">
+      {% for new,des,i in mylist %}
+      <img src="{{i}}" alt="">
+      <h3>News:</h3>{{new}}
+      {{value|linebreaks}}
+      <h4>Description</h4>{{des}}
+      {{value|linebreaks}}
+      {% endfor %}
+  </div>
+{% endblock body %}
